@@ -8,6 +8,14 @@ function fetchFunction() {
 }
 // Calling Country Data From API END
 
+
+
+
+
+
+
+
+
 // Getting ALl Values From API Start
 function countries(allCountry) {
     for (country of allCountry) {
