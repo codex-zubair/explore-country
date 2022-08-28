@@ -47,7 +47,7 @@ document.getElementById('search-btn').addEventListener('click', () => {
 
 
             // *Creating Card start
-            div.innerHTML = `<img class="w-full h-36" src="${country[0].flags.svg}" alt="Mountain">
+            div.innerHTML = `<img class="w-auto" src="${country[0].flags.svg}" alt="Mountain">
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">${country[0].name.common}</div>
       <p class="text-gray-700 text-base">
