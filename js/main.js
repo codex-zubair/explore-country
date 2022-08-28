@@ -14,14 +14,15 @@ function fetchFunction() {
 
 
 
-
-
 // Getting ALl Values From API Start
 function countries(allCountry) {
   for (country of allCountry) {
 
     // Getting Parent Section
     const sectionDiv = document.getElementById('country-section-div');
+
+
+    console.log(country.maps.googleMaps);
 
 
     const div = document.createElement('div');
@@ -32,6 +33,11 @@ function countries(allCountry) {
     // Creating Card start
     div.innerHTML = `<img class="w-full h-36" src="${country.flags.svg}" alt="Mountain">
     <div class="px-6 py-4">
+
+    <iframe src="${country.maps.googleMaps}"></iframe>
+
+
+
       <div class="font-bold text-xl mb-2">${country.name.common}</div>
       <p class="text-gray-700 text-base">
         <span>Capital: </span> ${country.capital[0]}
@@ -71,4 +77,4 @@ function check() {
 
 
 
-
+fetchFunction();
