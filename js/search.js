@@ -45,7 +45,7 @@ document.getElementById('search-btn').addEventListener('click', () => {
 
                 const div = document.createElement('div');
 
-                div.classList.add('rounded', 'overflow-hidden', 'shadow-lg');
+                1675           div.classList.add('rounded', 'overflow-hidden', 'shadow-lg');
 
 
                 // *Creating Card start
