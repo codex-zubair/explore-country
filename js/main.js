@@ -34,7 +34,7 @@ function countries(allCountry) {
     div.innerHTML = `<img class="w-full h-36" src="${country.flags.svg}" alt="Mountain">
     <div class="px-6 py-4">
 
-    <iframe src="${country.maps.googleMaps}"></iframe>
+    
 
 
 
