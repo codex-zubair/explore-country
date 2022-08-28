@@ -2,52 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS Style Shit -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Tailwind Link -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Style Shit -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Tailwind Link -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Explore Country</title>
+  <title>Explore Country</title>
 </head>
 
-<body class="bg-slate-200">
-    <!-- Header Section Start -->
-    <header>
-        <h1 id="title-header" class="text-2xl">EXPLORE COUNTRY</h1>
+<body class="bg-lime-100">
+  <!-- Header Section Start -->
+  <header>
+    <h1 id="title-header" class="text-2xl">EXPLORE COUNTRY</h1>
 
-      <div class="text-right mr-10">
+    <div class="text-right flex space-x-40 align-middle justify-center mt-2">
+
+      <button class="bg-blue-500 hover:bg-blue-600 text-white px-3 rounded-sm font-semibold mt-2"
+        onclick="fetchFunction()">Back</button>
+
+      <div>
         <input id="input-field" type="text" class="">
-        <button id="search-btn" class="bg-blue-500 hover:bg-blue-600 text-white px-3 rounded-sm font-semibold mt-2">Search</button>
+        <button id="search-btn"
+          class="bg-blue-500 hover:bg-blue-600 text-white px-3 rounded-sm font-semibold mt-2">Search</button>
+      </div>
+
+    </div>
+
+
+
+  </header>
+  <!-- Header Section End -->
+
+
+  <!-- Main Section Start -->
+  <main>
+    <!-- grid Card Section -->
+    <section>
+
+      <div id="country-section-div"
+        class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+        <!--Card 1-->
+
 
       </div>
-    </header>
-    <!-- Header Section End -->
+      </div>
 
-
-    <!-- Main Section Start -->
-    <main>
-        <!-- grid Card Section -->
-        <section>
-            
-  <div id="country-section-div" class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-    <!--Card 1-->
-    
-
-  </div>
-</div>
-
-        </section>
+    </section>
 
 
 
 
 
-        <!--! Explore Section Start -->
-        <section></section>
-        <!--! Explore Section End-->
+    <!-- !Explore Section Start -->
+    <section id="explore-section" class="text-center w-7/12 mx-auto">
+
+
+    </section>
+    <!-- !Explore Section Start -->
 
 
 
@@ -55,34 +69,19 @@
 
 
 
-
-
-    </main>
-    <!-- Main Section End -->
-
-   
-    <button onclick="fetchFunction()" class="bg-blue-600 rounded-md px-3 text-white">Checking Button</button>
-    <button onclick="check()" class="bg-blue-600 rounded-md px-3 text-white">Check</button>
-
-
-
- 
+  </main>
+  <!-- Main Section End -->
 
 
 
 
 
 
-
-
-
-
-
-    <!--JavaScript Start -->
-    <script src="./js/main.js"></script>
-    <script src="./js/search.js"></script>
-    <script src="./js/explore.js"></script>
-    <!--JavaScript End -->
+  <!--JavaScript Start -->
+  <script src="./js/main.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/explore.js"></script>
+  <!--JavaScript End -->
 </body>
 
 </html>
