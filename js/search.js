@@ -43,6 +43,10 @@ document.getElementById('search-btn').addEventListener('click', () => {
                 sectionDiv.innerHTML = ``;
 
 
+                const exploreSection = document.getElementById('explore-section');
+                exploreSection.innerHTML = ``;
+
+
                 const div = document.createElement('div');
 
                 div.classList.add('rounded', 'overflow-hidden', 'shadow-lg');
