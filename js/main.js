@@ -63,7 +63,7 @@ function countries(allCountry) {
 
 
     // Creating Card start
-    div.innerHTML = `<img class="w-full h-36" src="${country.flags.svg}" alt="Mountain">
+    div.innerHTML = `<img class="w-full" src="${country.flags.svg}" alt="Mountain">
     <div class="px-6 py-4">
 
     

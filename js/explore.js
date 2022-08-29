@@ -1,3 +1,10 @@
+function homePage()
+{
+  window.location.href = 'index.html';
+}
+
+
+
 function exploreBtn(country) {
 
 
@@ -9,13 +16,7 @@ function exploreBtn(country) {
 
 
     function searchContent(countryName) {
-        console.log(countryName[0]);
-
-
-
-
-
-
+      
 
         // TODO start 
         // !Giving Search Result...
@@ -34,7 +35,7 @@ function exploreBtn(country) {
 
 
         // *Creating Card start
-        div.innerHTML = `<img class="w-full h-36" src="${countryName[0].flags.svg}" alt="Mountain">
+        div.innerHTML = `<img class="w-full" src="${countryName[0].flags.svg}" alt="Mountain">
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2 text-center">${countryName[0].name.common}</div>
       <p class="text-gray-700 font-semibold">
@@ -51,11 +52,6 @@ function exploreBtn(country) {
       <p class="text-gray-700 font-semibold">
         <span class="font-bold text-blue-700">Capital: </span> ${countryName[0].capital[0]}
       </p>
-
-
-
-      
-      
       
     </div>`;
         //* Creating Card End
