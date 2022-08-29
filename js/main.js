@@ -1,12 +1,23 @@
 // Calling Country Data From API Start
 
-function fetchFunction() {
-  fetch('https://restcountries.com/v3.1/all')
-    .then(response => response.json())
-    .then(allCountry => countries(allCountry))
+  // !Loading the HTML.index file at first....
+  
 
+
+function onLoadIndex()
+{
+  fetch('https://restcountries.com/v3.1/all')
+  .then(response => response.json())
+  .then(allCountry => countries(allCountry))
 }
 // Calling Country Data From API END
+
+
+
+
+
+
+
 
 
 
@@ -21,8 +32,6 @@ function countries(allCountry) {
     // Getting Parent Section
     const sectionDiv = document.getElementById('country-section-div');
 
-
-    console.log(country.maps.googleMaps);
 
 
     const div = document.createElement('div');
@@ -55,7 +64,13 @@ function countries(allCountry) {
 
 
 }
-// Getting ALl Values From API END
+
+
+
+
+
+// !On load Calling...
+onLoadIndex();
 
 
 
@@ -65,16 +80,14 @@ function countries(allCountry) {
 
 
 
-// Creating Element And Storing Data...
-function check() {
-  fetch('https://restcountries.com/v3.1/all')
-    .then(response => response.json())
-    .then(allCountry => console.log(allCountry))
-
-
-
+// Calling Sports page
+function sports()
+{
+    // window.location.href = index.html;
+    window.location.href = 'sports.html'
 }
 
 
 
-fetchFunction();
+
+
