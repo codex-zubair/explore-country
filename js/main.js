@@ -1,14 +1,37 @@
 // Calling Country Data From API Start
 
-  // !Loading the HTML.index file at first....
-  
+// !Loading the HTML.index file at first....
 
 
-function onLoadIndex()
-{
-  fetch('https://restcountries.com/v3.1/all')
-  .then(response => response.json())
-  .then(allCountry => countries(allCountry))
+
+// function onLoadIndex()
+// {
+//   fetch('https://restcountries.com/v3.1/all')
+//   .then(response => response.json())
+//   .then(allCountry => countries(allCountry))
+//   .catch(error => console.log(error));
+// }
+
+
+onLoadIndex = async () => {
+  try {
+
+    progressBar('0%');
+    const url = ('https://restcountries.com/v3.1/all');
+    progressBar('10%');
+    const response = await fetch(url);
+    progressBar('60%');
+    const allCountry = await response.json();
+    progressBar('100%');
+    countries(allCountry);
+
+  }
+  catch(error)
+  {
+    console.log(error);
+  }
+
+
 }
 // Calling Country Data From API END
 
@@ -49,7 +72,7 @@ function countries(allCountry) {
 
       <div class="font-bold text-xl mb-2">${country.name.common}</div>
       <p class="text-gray-700 text-base">
-        <span>Capital: </span> ${country.capital[0]}
+        <span>Capital: </span> ${country.capital}
       </p>
       <button onclick="exploreBtn('${country.name.common}')" class="bg-blue-500 hover:bg-blue-600 exploreBtn text-white px-3 py-1 rounded-sm font-semibold mt-2">Explore</button>
     </div>`;
@@ -81,13 +104,33 @@ onLoadIndex();
 
 
 // Calling Sports page
-function sports()
-{
-    // window.location.href = index.html;
-    window.location.href = 'sports.html'
+function sports() {
+  // window.location.href = index.html;
+  window.location.href = 'sports.html'
 }
 
 
 
 
 
+
+
+
+// ! Progress Bar Start...
+
+
+function progressBar(progressBarValue) {
+
+  const progressBar = document.getElementById('progress-bar');
+  progressBar.style.width = progressBarValue;
+  progressBar.innerText = progressBarValue;
+
+
+
+  if(progressBarValue == '100%')
+  {
+    progressBar.innerText = '';
+  }
+}
+
+// ! Progress Bar End...
